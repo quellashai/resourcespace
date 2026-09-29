@@ -391,9 +391,9 @@ if ($parent > 0) {
         }
         
 
-        // Show below button by default. If it would overflow bottom then show it above
+        // Show below button by default. Use the viewport height, excluding browser chrome, to check for overflow.
         top = btn_bb.bottom;
-        if (top + menu_bb.height > window.outerHeight) {
+        if (top + menu_bb.height > window.innerHeight) {
             top = btn_bb.top - menu_bb.height;
         }
 
