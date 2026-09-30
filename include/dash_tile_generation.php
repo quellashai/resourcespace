@@ -366,7 +366,7 @@ function tile_config_themeselector($tile, $tile_id, $tile_width, $tile_height)
         if ($path !== null) {
             ?>
             <img
-                alt="<?php echo $alt; ?>"
+                alt="<?php echo escape($alt); ?>"
                 src="<?php echo $path; ?>"
                 class="thmbs-tile-img"
             >

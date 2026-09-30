@@ -104,7 +104,7 @@ if ($submitdashtile && enforcePostRequest(false)) {
         parse_str(str_replace("&amp;", "&", ($buildstring[1] ?? "")), $buildstring);
 
         $buildstring['tltype'] = $buildstring['tltype'] ?? 'ftxt';
-        if ($buildstring['tltype'] === 'conf' && $buildstring['tltype'] === 'thmsl') {
+        if ($buildstring['tltype'] === 'conf' && $buildstring['tlstyle'] === 'thmsl') {
             $buildurl = str_replace("tltype=conf", "tltype=thmsl", $buildurl);
             $buildstring['tlstyle'] = 'multi';
         }
